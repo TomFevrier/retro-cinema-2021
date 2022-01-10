@@ -28,7 +28,9 @@
 						<div class='movies'>
 							{#each movies as movie}
 								<a href='https://imdb.com/title/{movie.imdbId}'>
-									<img class='poster' src={posters.get(movie.imdbId || movie.title).src} />
+									<div class='poster'>
+										<img src={posters.get(movie.imdbId || movie.title).src} />
+									</div>
 								</a>
 							{/each}
 						</div>
@@ -46,7 +48,9 @@
 						<div class='movies'>
 							{#each movies as movie}
 								<a href='https://imdb.com/title/{movie.imdbId}'>
-									<img class='poster' src={posters.get(movie.imdbId || movie.title).src} />
+									<div class='poster'>
+										<img src={posters.get(movie.imdbId || movie.title).src} />
+									</div>
 								</a>
 							{/each}
 						</div>
@@ -85,7 +89,7 @@
 				display: block;
 				border-radius: 50%;
 				width: 6rem;
-				aspect-ratio: 1;
+				// aspect-ratio: 1;
 			}
 
 			.content {
@@ -96,8 +100,10 @@
 
 					.poster {
 						width: 2.5rem;
-						aspect-ratio: 2/3;
+						// aspect-ratio: 2/3;
+						padding-top: 150%;
 						transition: transform 0.2s ease-in-out;
+						position: relative;
 
 						@include sm {
 							width: 2rem;
@@ -110,6 +116,15 @@
 						&:hover {
 							z-index: 101;
 							transform: scale(1.1);
+						}
+
+						img {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
 						}
 						
 					}

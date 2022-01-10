@@ -40,7 +40,9 @@
 		{#if posters}
 			<div class='posters'>
 				{#each data.unique('imdbId').filter((d) => d.medium === 'Cinéma' && d.year >= 2021).shuffle().slice(0, 32) as movie}
-					<img src={posters.get(movie.imdbId || movie.title).src} />
+					<div class='poster'>
+						<img src={posters.get(movie.imdbId || movie.title).src} />
+					</div>
 				{/each}
 			</div>
 		{/if}
@@ -98,11 +100,20 @@
 
 			opacity: 0.2;
 
-			img {
-				width: 100%;
-				display: block;
-				object-fit: cover;
-				aspect-ratio: 2/3;
+			.poster {
+				padding-top: 150%;
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+					// aspect-ratio: 2/3;
+				}
 			}
 		}
 

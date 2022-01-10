@@ -84,7 +84,12 @@
 		{#each circles as circle}
 			<div
 				class='circle'
-				style='left: {circle.x}px; top: {circle.y}px; width: {circle.width}px;'
+				style='
+					left: {circle.x}px;
+					top: {circle.y}px;
+					width: {circle.width}px;
+					height: {circle.width}px;
+				'
 				on:mouseenter={() => hovered = circle}
 				on:mouseleave={() => hovered = null}
 			>
@@ -120,7 +125,7 @@
 
 		.circle {
 			position: absolute;
-			aspect-ratio: 1;
+			// aspect-ratio: 1;
 			background-color: $main-color;
 			border-radius: 50%;
 			opacity: 0.8;

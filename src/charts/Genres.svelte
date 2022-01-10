@@ -45,6 +45,7 @@
 				left: {circle.x + width * 0.5}px;
 				top: {circle.y + height * 0.5}px;
 				width: {1.8 * circle.r}px;
+				height: {1.8 * circle.r}px;
 			'
 			on:mouseenter={() => hovered = circle}
 			on:mouseleave={() => hovered = null}
@@ -80,7 +81,6 @@
 
 		.circle {
 			position: absolute;
-			aspect-ratio: 1;
 			background-color: $main-color;
 			border-radius: 50%;
 			transform: translate(-50%, -50%) scale(0);

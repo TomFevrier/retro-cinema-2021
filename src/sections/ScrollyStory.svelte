@@ -527,6 +527,9 @@
 			}
 
 			.poster {
+				position: absolute;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
@@ -545,8 +548,8 @@
 
 		&.grid {
 			.item {
-				aspect-ratio: 2/3;
-				width: auto;
+				// aspect-ratio: 2/3;
+				width: 100%;
 				opacity: 0.2 !important;
 				transition: opacity $animation-duration $animation-timing-function;
 
