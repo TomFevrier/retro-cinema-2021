@@ -81,7 +81,7 @@ const typografix = (html) => {
 		.replace(/ ;/g, "&nbsp;;")
 		.replace(/ !/g, "&nbsp;!")
 		.replace(/ \?/g, "&nbsp;?")
-		.replace(/ - /g, "&nbsp;&mdash;&nbsp;")	// Tirets cadratins
+		.replace(/ - /g, " &mdash;&nbsp;")		// Tirets cadratins
 		.replace(/ \%/g, "&nbsp;%");			// Pourcentages
 
 	return output;
