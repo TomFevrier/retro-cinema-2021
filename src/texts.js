@@ -30,8 +30,8 @@ const texts = {
 		`Je tâcherai cette année de découvrir plus de cinéma dit "de patrimoine". En profitant de rétrospectives en salle, peut-être ?`
 	],
 	medium: [
-		`Malgré leur fermeture pendant près de six mois, j'aurai passé *un peu moins de six jours dans une salle de cinéma* en 2021.`,
-		`Avec la multiplication des plateformes de SVOD, il est parfois difficile de mettre la main sur un film sans devoir cumuler de coûteux abonnements. C'est pour cela qu'en plus de *Netflix*, j'ai aussi vu *beaucoup de films téléchargés illégalement*... ce qui m'a d'ailleurs valu mon premier avertissement d'Hadopi !`
+		`Malgré leur fermeture pendant près de six mois, j'aurai passé *un peu moins de six jours dans une salle de cinéma* en 2021 - meilleures conditions pour découvrir un film.`,
+		`Avec la multiplication des plateformes de SVOD, il est parfois difficile de mettre la main sur une œuvre sans devoir cumuler de coûteux abonnements. C'est pour cela qu'en parallèle de *Netflix*, j'ai aussi vu *beaucoup de films téléchargés illégalement*... ce qui m'a d'ailleurs valu mon premier avertissement d'Hadopi !`
 	],
 	originCountry: [
 		`En 2021, j'aurai vu des films provenant de *{{ NB_COUNTRIES }} pays différents*, dont je n'avais parfois vu aucun film auparavant - la Pologne, l'Estonie ou l'Algérie, par exemple.`,

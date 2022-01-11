@@ -573,7 +573,7 @@
 		}
 
 		&.watch-date {
-			item.hidden {
+			.item.hidden {
 				opacity: 0;
 				pointer-events: none;
 			}
