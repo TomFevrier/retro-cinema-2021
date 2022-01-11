@@ -23,7 +23,7 @@
 
 <style lang='scss'>
 	.masthead {
-		width: 95%;
+		width: 100%;
 		max-width: 24rem;
 		padding: 1rem;
 		margin: 2rem auto;

@@ -30,7 +30,7 @@ const texts = {
 		`Je tâcherai cette année de découvrir plus de cinéma dit "de patrimoine". En profitant de rétrospectives en salle, peut-être ?`
 	],
 	medium: [
-		`Malgré leur fermeture pendant près de six mois, j'aurai donc passé *un peu moins de six jours dans une salle de cinéma* en 2021.`,
+		`Malgré leur fermeture pendant près de six mois, j'aurai passé *un peu moins de six jours dans une salle de cinéma* en 2021.`,
 		`Avec la multiplication des plateformes de SVOD, il est parfois difficile de mettre la main sur un film sans devoir cumuler de coûteux abonnements. C'est pour cela qu'en plus de *Netflix*, j'ai aussi vu *beaucoup de films téléchargés illégalement*... ce qui m'a d'ailleurs valu mon premier avertissement d'Hadopi !`
 	],
 	originCountry: [
@@ -119,7 +119,7 @@ const texts = {
 		},
 		{
 			content: [
-				`Merci aux *cinémas Pathé-Gaumont* : grâce à mon Cinépass, j'ai pu découvrir plus de films au cinéma cette année que les cinq années précédentes !`,
+				`Merci aux *cinémas Pathé-Gaumont* : grâce à mon Cinépass, j'ai pu découvrir plus de films en salle cette année que les cinq années précédentes !`,
 				`Merci au *Club de l'Étoile*, le meilleur cinéma indépendant de Paris, et merci à *Victor Bonnefoy* pour tous ces "Unknown Movies".`,
 				`Et parce que le cinéma est un art qui se partage, merci à *toutes celles et ceux qui m'ont accompagné en salle* cette année : mes parents, Axel, Youssr, Vincent, Raphaëlle, Julien, Pauline, Damien et bien entendu Théo, mon fidèle acolyte cinéphile.`
 			]

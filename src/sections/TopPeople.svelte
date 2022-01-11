@@ -67,11 +67,12 @@
 	.top-people-wrapper {
 		display: flex;
 		justify-content: space-between;
-		width: 64rem;
+		width: 100%;
+		max-width: 64rem;
 		margin: 0 auto;
 
 		@include lg {
-			grid-template-columns: 1fr;
+			flex-direction: column;
 		}
 
 		h2 {

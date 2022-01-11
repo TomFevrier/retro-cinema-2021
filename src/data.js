@@ -367,7 +367,7 @@ const data = [
 		languages: [
 			"Anglais"
 		],
-		director: "Anatole LiTélévisionak",
+		director: "Anatole Litvak",
 		actors: [
 			"Barbara Stanwyck",
 			"Burt Lancaster",
@@ -843,8 +843,8 @@ const data = [
 	{
 		date: "2021-04-05",
 		imdbId: "tt0120789",
-		title: "PleasanTélévisionille",
-		originalTitle: "PleasanTélévisionille",
+		title: "Pleasantville",
+		originalTitle: "Pleasantville",
 		year: 1998,
 		runtime: 124,
 		languages: [

@@ -57,8 +57,8 @@
 	{#if mobile}
 		<p>{@html formatString(texts.grid.all.join(' '), data)}</p>
 		<div class='see-on-pc'>
-			<i class='fi fi-tv'></i>
-			<p>Pour découvrir une année de cinéma en infographie, rendez-vous sur un ordinateur !</p>
+			<i class='fi fi-laptop'></i>
+			<p>Pour découvrir une année de cinéma en infographies, rendez-vous sur un ordinateur !</p>
 		</div>
 		<!-- {#each sectionsMobile as section}
 			{#if section}
