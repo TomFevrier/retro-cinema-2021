@@ -90,13 +90,13 @@
 			})
 			.map((x, i, array) => {
 				if (i === 0) {
-					return x / 2;
+					return x / 2 - 16;
 				}
-				return (x + array[i - 1]) / 2;
+				return (x + array[i - 1]) / 2 - 16;
 			})
 		);
 
-	const getDatePosition = (date) => {
+	$: getDatePosition = width && ((date) => {
 		const formatDay = timeFormat('%u');
 		const formatWeek = timeFormat('%W');
 
@@ -112,7 +112,7 @@
 			x: center.x + CELL_SIZE_CALENDAR * (isFirstSemester ? +formatWeek(date) : +formatWeek(date) - 26) + offsetX,
 			y: center.y + CELL_SIZE_CALENDAR * (isFirstSemester ? +formatDay(date) : +formatDay(date) + 10)
 		};
-	}
+	});
 	
 	const getMetricPositions = (metric) => {
 		const unique = data.unique('imdbId');
@@ -285,6 +285,16 @@
 		if (!d.imdbId || metric === 'watch-date') return;
 		window.open(`https://imdb.com/title/${d.imdbId}`, '_blank');
 	}
+
+	const isHidden = (d, i) => {
+		if (metric === 'grid') {
+			return $movies.slice(i + 1).some((e) => e.imdbId === d.imdbId);
+		}
+		if (metric === 'watch-date') {
+			return $movies.slice(i + 1).some((e) => e.date === d.date);
+		}
+		
+	}
 </script>
 
 <Scrolly {steps} {data} bind:active={activeStep}>
@@ -356,13 +366,13 @@
 					<div
 						class='item' 
 						class:highlighted={isInCategory(d, category)}
-						class:hidden={$movies.slice(i + 1).some((e) => e.imdbId === d.imdbId)}
+						class:hidden={isHidden(d, i)}
 						style='
 							left: {d.x}px;
 							top: {d.y}px;
 							width: {d.width}px;
 							height: {d.height}px;
-							opacity: {opacityScale(dataByDate.get(d.date).sum('runtime'))};
+							opacity: {metric === 'watch-date' ? opacityScale(dataByDate.get(d.date).sum('runtime')) : 'auto'};
 						'
 						on:mouseenter={() => hovered = (isInCategory(d, category) || metric !== 'grid') && d}
 						on:mouseleave={() => hovered = null}
@@ -566,7 +576,7 @@
 				}
 
 				&.hidden {
-					opacity: 0;
+					opacity: 0 !important;
 					pointer-events: none;
 				}
 			}
@@ -574,7 +584,7 @@
 
 		&.watch-date {
 			.item.hidden {
-				opacity: 0;
+				opacity: 0 !important;
 				pointer-events: none;
 			}
 		}
