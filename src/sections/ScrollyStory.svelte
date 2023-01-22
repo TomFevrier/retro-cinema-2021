@@ -656,6 +656,10 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+
+				h4 {
+					margin: 0;
+				}
 			}
 
 			.top-days {
